@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarconnetDotFr_MVC", "MarconnetDotFr_2018\MarconnetDotFr_MVC.csproj", "{AD49E0D1-AD72-4AE1-B437-A75C39081692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarconnetDotFr_MVC", "MarconnetDotFr_MVC\MarconnetDotFr_MVC.csproj", "{AD49E0D1-AD72-4AE1-B437-A75C39081692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarconnetDotFr_MVC.Tests", "MarconnetDotFr_2018.Tests\MarconnetDotFr_MVC.Tests.csproj", "{1D122E28-B5A3-4C4C-9085-E8F190C7A339}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarconnetDotFr_MVC.Tests", "MarconnetDotFr_MVC.Tests\MarconnetDotFr_MVC.Tests.csproj", "{1D122E28-B5A3-4C4C-9085-E8F190C7A339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
