@@ -3,6 +3,18 @@
   <experiences>
 
     <exp>
+      <image>content/img/company-msc.png</image>
+      <title>MSC</title>
+      <location>Geneva, Switzerland</location>
+      <description>
+        Software engineer at MSC (Mediterranean Shipping Company), an international shipping company.
+      </description>
+      <tech>
+        C#, .NET MVC, SQL Server, Javascript (with Typescript), VSTS
+      </tech>
+    </exp>
+
+    <exp>
       <image>content/img/company-dialoginsight.png</image>
       <title>Dialog Insight</title>
       <location>Québec, Canada</location>
