@@ -1,0 +1,11 @@
+﻿@model MarconnetDotFr_DernierFM.Models.Entities.LastFMUser
+@{
+    ViewBag.Title = "DernierFM";
+    Layout = "~/Views/Shared/_LayoutSmallTitle.cshtml";
+}
+
+<h1>@Model.RealName's last.fm</h1>
+
+<p>Registered the @Model.Registered.ToString("dd.MM.yyyy"), listened to @Model.Playcount songs since.</p>
+
+<p>Favourite album of all time is @Model.FavouriteAlbum.Name (played @Model.FavouriteAlbum.Playcount times).</p>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Benjamin Marconnet's website" />
+    <meta name="keywords" content="Marconnet, Benjamin Marconnet" />
+    <meta name="author" content="Benjamin Marconnet" />
+    <meta name="theme-color" content="#141414" />
+
+    <title>MarconnetDotFr</title>
+    <link href="@Url.Content("/Content/CSS/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="website-category website-smalltitle">
+        <a href="@Url.Action("Index", "Home")">
+            BE N  JA M IN M A  R CO NN E  T HOMEPAGE
+        </a>
+    </div>
+
+    <div class="website-body">
+        @RenderBody()
+    </div>
+
+    <script>
+        window.onload = function (e) {
+            [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                img.onload = function () {
+                    img.removeAttribute('data-src');
+                };
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,4 +1,6 @@
-﻿using MarconnetDotFr_MVC.Models.Repos;
+﻿using MarconnetDotFr_DernierFM.Models;
+using MarconnetDotFr_DernierFM.Repository;
+using MarconnetDotFr_MVC.Models.Repos;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -22,6 +24,12 @@ namespace MarconnetDotFr_MVC.Infrastructure
         {
             kernel.Bind<IResumeRepository>().To<XMLFilesResumeRepository>();
             kernel.Bind<IWorkRepository>().To<XMLFilesWorkRepository>();
+
+            // lastfm
+            string apiKey = System.Configuration.ConfigurationManager.AppSettings["lastfm_APIKey"];
+            string sharedSecret = System.Configuration.ConfigurationManager.AppSettings["lastfm_SharedSecret"];
+            LastFMCredentials lastFMCredentials = new LastFMCredentials(apiKey, sharedSecret);
+            kernel.Bind<ILastFMRepository>().To<LastFMRepository>().WithConstructorArgument("lastFMCredentials", lastFMCredentials);
         }
 
         public object GetService(Type serviceType)
