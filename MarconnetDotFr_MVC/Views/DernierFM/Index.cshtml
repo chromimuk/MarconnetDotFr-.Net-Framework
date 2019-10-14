@@ -4,8 +4,42 @@
     Layout = "~/Views/Shared/_LayoutSmallTitle.cshtml";
 }
 
+<style>
+    .albumDiv {
+        width:30%; float: left;
+    }
+    
+    .albumDiv img {
+        width:90%;
+    }
+</style>
+
 <h1>@Model.RealName's last.fm</h1>
 
 <p>Registered the @Model.Registered.ToString("dd.MM.yyyy"), listened to @Model.Playcount songs since.</p>
 
-<p>Favourite album of all time is @Model.FavouriteAlbum.Name (played @Model.FavouriteAlbum.Playcount times).</p>
+<p>Favourite album of all time is @Model.FavouriteAlbum_AllTime.Name (played @Model.FavouriteAlbum_AllTime.Playcount times).</p>
+
+@foreach (var album in Model.FavouriteAlbums_Overall)
+{
+    <div class="albumDiv">
+        <img src="@album.AlbumImageURL" alt="@album.Name" />
+        <br />
+        @album.Name
+    </div>
+}
+
+<div style="clear:both;"></div>
+
+<h2>And in 2019 so far...</h2>
+
+@foreach (var album in Model.FavouriteAlbums_CurrentYear)
+{
+    <div class="albumDiv">
+        <img src="@album.AlbumImageURL" alt="@album.Name" />
+        <br />
+        @album.Name
+    </div>
+}
+
+<div style="clear:both;"></div>

@@ -16,7 +16,16 @@ namespace MarconnetDotFr_DernierFM.Models.Entities
         public string Country { get; set; }
         public long Playcount { get; set; }
         public DateTime Registered { get; set; }
-        public LastFMAlbum FavouriteAlbum { get; set; }
+        public IList<LastFMAlbum> FavouriteAlbums_Overall { get; set; }
+        public IList<LastFMAlbum> FavouriteAlbums_CurrentYear { get; set; }
+
+        public LastFMAlbum FavouriteAlbum_AllTime {
+            get
+            {
+                long maxPlayCount = FavouriteAlbums_Overall.Max(x => x.Playcount);
+                return FavouriteAlbums_Overall.First(x => x.Playcount == maxPlayCount);
+            }
+        }
 
         public LastFMUser(ILastFMUserDAO dao)
         {
@@ -27,6 +36,8 @@ namespace MarconnetDotFr_DernierFM.Models.Entities
             Country = dao.GetCountry();
             Playcount = dao.GetPlayCount();
             Registered = dao.GetRegistered();
+
+            FavouriteAlbums_Overall = new List<LastFMAlbum>();
         }
 
         public override string ToString()

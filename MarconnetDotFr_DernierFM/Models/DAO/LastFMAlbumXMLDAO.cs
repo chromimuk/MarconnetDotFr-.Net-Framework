@@ -41,7 +41,7 @@ namespace MarconnetDotFr_DernierFM.Models.DAO
 
         public string GetAlbumImageURL()
         {
-            return XMLHelper.GetValue(element, "image");
+            return XMLHelper.GetValue(element, "image", "size", "large");
         }
     }
 }

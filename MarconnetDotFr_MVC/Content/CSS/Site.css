@@ -75,6 +75,15 @@ img {
         transform-origin: 100%;
     }
 
+.website-smalltitle {
+    background: #141414;
+    padding: 10px 20px;
+}
+
+.website-smalltitle a {
+    color: #fff;
+}
+
 
 .website-category {
     margin-bottom: 10%;

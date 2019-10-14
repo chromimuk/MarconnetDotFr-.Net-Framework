@@ -27,9 +27,12 @@ namespace MarconnetDotFr_MVC.Controllers
             string username = "chromimuk";
 
             LastFMUser lastFMUser = await _lastFMRepository.GetLastFMUserAsync(username);
-            IEnumerable<LastFMAlbum> lastFMAlbums = await _lastFMRepository.GetFavouriteLastFMAlbumsAsync(username, 5, "overall");
 
-            lastFMUser.FavouriteAlbum = lastFMAlbums.First();
+            IEnumerable<LastFMAlbum> favouriteAlbums_overall = await _lastFMRepository.GetFavouriteLastFMAlbumsAsync(username, 3, "overall");
+            IEnumerable<LastFMAlbum> favouriteAlbums_currentYear = await _lastFMRepository.GetFavouriteLastFMAlbumsAsync(username, 3, "12month");
+
+            lastFMUser.FavouriteAlbums_Overall = favouriteAlbums_overall.OrderByDescending(x => x.Playcount).ToList();
+            lastFMUser.FavouriteAlbums_CurrentYear = favouriteAlbums_currentYear.OrderByDescending(x => x.Playcount).ToList();
 
             return View(lastFMUser);
         }
