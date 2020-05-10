@@ -1,0 +1,397 @@
+﻿@{
+    ViewBag.Title = "AbraCanada";
+}
+
+<link href="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+<style></style>
+
+<style>
+    /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.clearfix::after,
+.calendar ol::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ================
+Calendar Styling */
+.calendar {
+  border-radius: 10px;
+}
+
+.month {
+  font-size: 2rem;
+}
+
+@*@media(min-width: 992px) {
+  .month {
+    font-size: 3.5rem;
+  }
+}*@
+
+.calendar ol li {
+  float: left;
+  width: 14.28571%;
+}
+
+.calendar .day-names {
+  border-bottom: 1px solid #eee;
+}
+
+.calendar .day-names li {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.calendar .days li {
+  border-bottom: 1px solid #eee;
+  min-height: 8rem;
+}
+
+.calendar .days li .date {
+  margin: 0.5rem 0;
+}
+
+.calendar .days li .event {
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 1rem;
+  margin-bottom: 1px;
+}
+
+.calendar .days li .event.span-2 {
+  width: 200%;
+}
+
+.calendar .days li .event.begin {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+  background: none;
+}
+
+.calendar .days li:nth-child(n+29) {
+  border-bottom: none;
+}
+
+.calendar .days li.outside .date {
+  color: #ddd;
+}
+</style>
+
+
+<h1>
+    AbraCanada!
+
+    @if (Model > 0)
+    {
+        <small>
+            Plus que @Model dodos.
+        </small>
+    }
+</h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/map.png" alt="" />
+</div>
+
+<br />
+
+<h1>Planning v0.1</h1>
+
+<!-- Calendar -->
+<div class="calendar shadow bg-white p-5">
+    <div class="d-flex align-items-center">
+        <i class="fa fa-calendar fa-3x mr-3"></i>
+        <h2 class="month font-weight-bold mb-0 text-uppercase">Mai 2020</h2>
+    </div>
+    <br />
+    <ol class="day-names list-unstyled">
+        <li class="font-weight-bold text-uppercase">Lu</li>
+        <li class="font-weight-bold text-uppercase">Ma</li>
+        <li class="font-weight-bold text-uppercase">Me</li>
+        <li class="font-weight-bold text-uppercase">Je</li>
+        <li class="font-weight-bold text-uppercase">Ve</li>
+        <li class="font-weight-bold text-uppercase">Sa</li>
+        <li class="font-weight-bold text-uppercase">Di</li>
+    </ol>
+
+    <ol class="days list-unstyled">
+        <li class="outside">
+            <div class="date">11</div>
+        </li>
+        <li class="outside">
+            <div class="date">12</div>
+        </li>
+        <li class="outside">
+            <div class="date">13</div>
+        </li>
+        <li class="outside">
+            <div class="date">14</div>
+        </li>
+        <li class="outside">
+            <div class="date">15</div>
+        </li>
+        <li class="outside">
+            <div class="date">16</div>
+        </li>
+        <li class="outside">
+            <div class="date">17</div>
+        </li>
+        <li class="outside">
+            <div class="date">18</div>
+        </li>
+        <li class="outside">
+            <div class="date">19</div>
+        </li>
+        <li class="outside">
+            <div class="date">20</div>
+
+        </li>
+        <li>
+            <div class="date">21</div>
+            <div class="event bg-info">✈️</div>
+        </li>
+        <li>
+            <div class="date">22</div>
+            <div class="event begin bg-primary">MTL</div>
+        </li>
+        <li>
+            <div class="date">23</div>
+            <div class="event end bg-primary">‏‏‎ ‎‎</div>
+        </li>
+        <li>
+            <div class="date">24</div>
+            <div class="event bg-info">LA</div>
+        </li>
+        <li>
+            <div class="date">25</div>
+            <div class="event begin bg-primary">TO</div>
+        </li>
+        <li>
+            <div class="date">26</div>
+            <div class="event end bg-primary">‏‏‎ ‎</div>
+        </li>
+        <li>
+            <div class="date">27</div>
+            <div class="event bg-info">OT</div>
+        </li>
+        <li>
+            <div class="date">28</div>
+            <div class="event begin bg-primary">QC</div>
+        </li>
+        <li>
+            <div class="date">29</div>
+            <div class="event end bg-primary">‏‏‎ ‎</div>
+        </li>
+        <li>
+            <div class="date">30</div>
+            <div class="event bg-info">SA</div>
+        </li>
+        <li>
+            <div class="date">31</div>
+            <div class="event bg-primary">???</div>
+        </li>
+        <li>
+            <div class="date">1</div>
+            <div class="event bg-info">✈️</div>
+        </li>
+        <li class="outside">
+            <div class="date">2</div>
+        </li>
+        <li class="outside">
+            <div class="date">3</div>
+        </li>
+        <li class="outside">
+            <div class="date">4</div>
+        </li>
+        <li class="outside">
+            <div class="date">5</div>
+        </li>
+        <li class="outside">
+            <div class="date">6</div>
+        </li>
+        <li class="outside">
+            <div class="date">7</div>
+        </li>
+    </ol>
+</div>
+
+<br />
+
+<h1>Montréal <small>Du 21 au 23 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/mtl.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li>Vieux-Montréal</li>
+    <li>Mont-Royal</li>
+    <li>Jardin Botanique</li>
+    <li>Le Village</li>
+    <li>Le marché Bonsecours</li>
+    <li>Le Biodôme (si ouvert :'()</li>
+</ul>
+
+Miam et gloup gloup :
+<ul>
+    <li>La Banquise</li>
+    <li>Brasseur de Montréal</li>
+    <li>Pub BreWskey</li>
+</ul>
+
+
+<h1>Laurentides <small>24 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/mtl_laurentides.png" alt="" />
+</div>
+<br />
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/mt-tremblant.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li><strike>faire de l'acrobranche</strike></li>
+    <li>se balader à Mont-Tremblant</li>
+</ul>
+
+<h1>Toronto <small>Du 25 au 26 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/laurentides_toronto.png" alt="" />
+</div>
+<br />
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/toronto.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li>Kensington Market</li>
+    <li>Eaton Centre</li>
+    <li>Distillery District</li>
+    <li>La graaaaaaande tour</li>
+    <li><strike>Le musée des pieds</strike></li>
+    <li>Choper une casquette des Blue Jays</li>
+    <li>Chinatown</li>
+    <li>Chutes du Niagara</li>
+</ul>
+
+
+<h1>Ottawa <small>27 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/toronto_ottawa.png" alt="" />
+</div>
+<br />
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/ottawa.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li>expliquer la magie de la flamme dans l'eau sans déc c'est quoi ce bordel</li>
+    <li>ByWard Market</li>
+</ul>
+
+Miam et gloup gloup :
+<ul>
+    <li>Clocktower Brewhouse</li>
+    <li>chez Queues de Castor (tm)</li>
+</ul>
+
+
+<h1>Québec <small>Du 29 au 30 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/ottawa_quebec.png" alt="" />
+</div>
+<br />
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/qc.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li>Vieux-Québec</li>
+    <li>Plaines d'Abraham</li>
+    <li>que je dise "hey j'habitais là"</li>
+    <li>Saint-Roch</li>
+    <li>Cap-Rouge</li>
+    <li>Wendake ?</li>
+    <li>Chutes de Montmorency</li>
+    <li>Ile d'Orléans</li>
+</ul>
+
+Miam et gloup gloup :
+<ul>
+    <li>poutine de Chez Ashton o-bli-gé</li>
+    <li>Bureau de poste</li>
+    <li>Macfly</li>
+    <li>Griendel</li>
+</ul>
+
+<h1>Saguenay <small>30 Mai</small></h1>
+
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/quebec_saguenay.png" alt="" />
+</div>
+<br />
+<div>
+    <img class="work-image-cover" data-src="Content/IMG/abracanada/saguenay.jpg" alt="" />
+</div>
+
+Principalement pour :
+<ul>
+    <li>idéalement un peu de balade à pied, idéalement un peu de balade sur l'eau parce qu'on aura piqué des kayaks</li>
+</ul>
+
+<h1>Quelque part au Québec ??? <small>31 Mai</small></h1>
+
+Principalement pour :
+<ul>
+    <li>réfléchir à un plan pour expliquer au bureau qu'on va pas rentrer tout de suite</li>
+</ul>
+
+<br />
+
+<h1>FAQ</h1>
+
+<h2>Mais il va faire quel temps exactement là bas</h2>
+
+<p>oui</p>
+
+<h2>Est-ce qu'on va voir des ours</h2>
+
+<p>mdr j'espère pas</p>
+
+<h2>Ca fait beaucoup de voiture comme même</h2>
+
+<p>on fera le jeu de crier quand on voit une voiture jaune</p>
+
+<h2>Est-ce que t'es HYPE</h2>
+
+<p>OUUUUUUUUUUUUUI</p>

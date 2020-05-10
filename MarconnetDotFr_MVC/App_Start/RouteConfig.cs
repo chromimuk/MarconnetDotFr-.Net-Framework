@@ -25,6 +25,12 @@ namespace MarconnetDotFr_MVC
             );
 
             routes.MapRoute(
+                name: "AbraCanada",
+                url: "AbraCanada",
+                defaults: new { controller = "Misc", action = "AbraCanada" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

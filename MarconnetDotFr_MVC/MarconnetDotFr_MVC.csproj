@@ -176,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DernierFMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MiscController.cs" />
     <Compile Include="Controllers\WorkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -209,6 +210,8 @@
     <None Include="packages.config" />
     <Content Include="Views\DernierFM\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutSmallTitle.cshtml" />
+    <Content Include="Views\Misc\AbraCanada.cshtml" />
+    <None Include="Properties\PublishProfiles\home469263021.1and1-data.host.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
