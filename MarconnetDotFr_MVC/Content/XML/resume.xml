@@ -38,7 +38,6 @@
       </tech>
     </exp>
 
-
     <exp>
       <image>content/img/company-novartis.png</image>
       <title>Novartis</title>
@@ -61,9 +60,7 @@
         Perl
       </tech>
     </exp>
-
   </experiences>
-
 
   <education>
 
@@ -88,6 +85,5 @@
         University diploma of technology in Computer Science, where I got a broad view of what the IT field is made of: conception, algorithms, implementation (low-level to object-oriented), web development, etc.
       </description>
     </edu>
-
   </education>
 </resume>

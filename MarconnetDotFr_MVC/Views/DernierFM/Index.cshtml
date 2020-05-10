@@ -6,12 +6,13 @@
 
 <style>
     .albumDiv {
-        width:30%; float: left;
+        width: 30%;
+        float: left;
     }
-    
-    .albumDiv img {
-        width:90%;
-    }
+
+        .albumDiv img {
+            width: 90%;
+        }
 </style>
 
 <h1>@Model.RealName's last.fm</h1>
@@ -22,11 +23,11 @@
 
 @foreach (var album in Model.FavouriteAlbums_Overall)
 {
-    <div class="albumDiv">
-        <img src="@album.AlbumImageURL" alt="@album.Name" />
-        <br />
-        @album.Name
-    </div>
+<div class="albumDiv">
+    <img src="@album.AlbumImageURL" alt="@album.Name" />
+    <br />
+    @album.Name
+</div>
 }
 
 <div style="clear:both;"></div>
@@ -35,11 +36,11 @@
 
 @foreach (var album in Model.FavouriteAlbums_CurrentYear)
 {
-    <div class="albumDiv">
-        <img src="@album.AlbumImageURL" alt="@album.Name" />
-        <br />
-        @album.Name
-    </div>
+<div class="albumDiv">
+    <img src="@album.AlbumImageURL" alt="@album.Name" />
+    <br />
+    @album.Name
+</div>
 }
 
 <div style="clear:both;"></div>

@@ -1,10 +1,9 @@
-﻿using System;
+﻿using MarconnetDotFr_MVC.Models.DAO;
+using MarconnetDotFr_MVC.Models.Entities;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Hosting;
 using System.Xml.Linq;
-using MarconnetDotFr_MVC.Models.DAO;
-using MarconnetDotFr_MVC.Models.Entities;
 
 namespace MarconnetDotFr_MVC.Models.Repos
 {
@@ -27,9 +26,9 @@ namespace MarconnetDotFr_MVC.Models.Repos
             }
             catch (DirectoryNotFoundException)
             {
-                #if DEBUG
+#if DEBUG
                 throw;
-                #endif
+#endif
             }
         }
 

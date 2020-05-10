@@ -17,8 +17,8 @@
             @Model.Subtitle
             @if (!string.IsNullOrEmpty(@Model.Link))
             {
-                <br />
-                <a href="@Model.Link"> Github</a>
+            <br />
+            <a href="@Model.Link"> Github</a>
             }
         </div>
     </div>
@@ -32,11 +32,9 @@
         <h1>Screenshots</h1>
         @foreach (string screenshot in @Model.Screenshots)
         {
-            <div class="work-screenshot @(@Model.Screenshots.Count == 1 ? "work-screenshot-alone" : "")">
-                <img class="work-image-cover" data-src="@screenshot" alt="" />
-            </div>
+        <div class="work-screenshot @(@Model.Screenshots.Count == 1 ? "work-screenshot-alone" : "")">
+            <img class="work-image-cover" data-src="@screenshot" alt="" />
+        </div>
         }
     </div>
-
 </div>
-

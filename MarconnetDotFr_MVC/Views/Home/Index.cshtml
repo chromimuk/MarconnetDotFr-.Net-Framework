@@ -21,21 +21,21 @@
 
         @foreach (var exp in Model.WorkExperiences)
         {
-            <div class="work-experience">
-                <div class="work-experience-content">
-                    <div class="company-logo">
-                        <img data-src="@exp.Image" alt="" />
-                    </div>
-                    <div class="company-info">
-                        <div class="company-info-name">@exp.Title</div>
-                        <div class="company-info-date">@exp.Location</div>
-                    </div>
-                    <div class="company-description">
-                        <span>@exp.Description</span>
-                        <span><b>Technologies used:</b> @exp.Tech</span>
-                    </div>
+        <div class="work-experience">
+            <div class="work-experience-content">
+                <div class="company-logo">
+                    <img data-src="@exp.Image" alt="" />
+                </div>
+                <div class="company-info">
+                    <div class="company-info-name">@exp.Title</div>
+                    <div class="company-info-date">@exp.Location</div>
+                </div>
+                <div class="company-description">
+                    <span>@exp.Description</span>
+                    <span><b>Technologies used:</b> @exp.Tech</span>
                 </div>
             </div>
+        </div>
         }
     </div>
 </section>
@@ -47,23 +47,23 @@
 
         @foreach (var diploma in Model.UniversityDiplomas)
         {
-            <div class="work-experience">
-                <div class="work-experience-content">
-                    <div class="company-logo">
-                        <img data-src="@diploma.Image" alt="" />
-                    </div>
-                    <div class="company-info">
-                        <div class="company-info-name s-hidden">@Html.Raw(@diploma.Title)</div>
-                        <div class="company-info-name s-show">@Html.Raw(@diploma.ShortTitle)</div>
-                        <div class="company-info-date university-info-date s-hidden">@diploma.Location</div>
-                        <div class="company-info-date s-show">@diploma.ShortLocation</div>
-                    </div>
+        <div class="work-experience">
+            <div class="work-experience-content">
+                <div class="company-logo">
+                    <img data-src="@diploma.Image" alt="" />
+                </div>
+                <div class="company-info">
+                    <div class="company-info-name s-hidden">@Html.Raw(@diploma.Title)</div>
+                    <div class="company-info-name s-show">@Html.Raw(@diploma.ShortTitle)</div>
+                    <div class="company-info-date university-info-date s-hidden">@diploma.Location</div>
+                    <div class="company-info-date s-show">@diploma.ShortLocation</div>
+                </div>
 
-                    <div class="company-description university-description">
-                        <span>@diploma.Description</span>
-                    </div>
+                <div class="company-description university-description">
+                    <span>@diploma.Description</span>
                 </div>
             </div>
+        </div>
         }
     </div>
 </section>
@@ -75,19 +75,19 @@
 
         @foreach (var item in Model.PersonalWork)
         {
-            <div class="work-experience">
-                <div class="work-experience-content">
-                    <div class="company-info work-info">
-                        <div class="company-info-name work-info-name">
-                            <a href="@item.Link">>> @item.Title</a>
-                        </div>
-                        <div class="company-info-date work-info-date">@item.Subtitle</div>
+        <div class="work-experience">
+            <div class="work-experience-content">
+                <div class="company-info work-info">
+                    <div class="company-info-name work-info-name">
+                        <a href="@item.Link">>> @item.Title</a>
                     </div>
-                    <div class="company-description work-description">
-                        <span>@Html.Raw(@item.Description)</span>
-                    </div>
+                    <div class="company-info-date work-info-date">@item.Subtitle</div>
+                </div>
+                <div class="company-description work-description">
+                    <span>@Html.Raw(@item.Description)</span>
                 </div>
             </div>
+        </div>
         }
     </div>
 </section>

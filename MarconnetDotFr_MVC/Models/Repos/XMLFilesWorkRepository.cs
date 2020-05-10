@@ -1,12 +1,10 @@
-﻿using System;
+﻿using MarconnetDotFr_MVC.Models.DAO.Work;
+using MarconnetDotFr_MVC.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Hosting;
 using System.Xml.Linq;
-using MarconnetDotFr_MVC.Models.DAO.Work;
-using MarconnetDotFr_MVC.Models.Entities;
 
 namespace MarconnetDotFr_MVC.Models.Repos
 {

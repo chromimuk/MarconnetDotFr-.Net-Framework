@@ -26,7 +26,6 @@ namespace MarconnetDotFr_MVC.Controllers
             _workRepository = workRepository;
         }
 
-
         /// <summary>
         /// Standard presentation for WorkItem
         /// </summary>
@@ -51,7 +50,6 @@ namespace MarconnetDotFr_MVC.Controllers
 
             return actionResult;
         }
-
 
         /// <summary>
         /// Specific view for the IDKCSS project

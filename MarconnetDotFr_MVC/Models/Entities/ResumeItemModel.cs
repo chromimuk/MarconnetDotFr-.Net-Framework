@@ -1,8 +1,4 @@
 ﻿using MarconnetDotFr_MVC.Models.DAO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace MarconnetDotFr_MVC.Models.Entities
 {
@@ -16,7 +12,9 @@ namespace MarconnetDotFr_MVC.Models.Entities
         public string Description { get; set; }
         public string Tech { get; set; }
 
-        public ResumeItemModel() { }
+        public ResumeItemModel()
+        {
+        }
 
         public ResumeItemModel(IResumeItemModelDAO dao)
         {

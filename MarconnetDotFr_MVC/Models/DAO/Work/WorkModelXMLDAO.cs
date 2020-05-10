@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace MarconnetDotFr_MVC.Models.DAO.Work
@@ -44,7 +41,6 @@ namespace MarconnetDotFr_MVC.Models.DAO.Work
         {
             return element.Element("cover").Element("title").Value;
         }
-
 
         public List<string> GetScreenshots()
         {

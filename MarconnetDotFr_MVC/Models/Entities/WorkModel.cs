@@ -1,8 +1,5 @@
 ﻿using MarconnetDotFr_MVC.Models.DAO.Work;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace MarconnetDotFr_MVC.Models.Entities
 {
@@ -16,7 +13,9 @@ namespace MarconnetDotFr_MVC.Models.Entities
         public string Content { get; set; }
         public List<string> Screenshots { get; set; }
 
-        public WorkModel() { }
+        public WorkModel()
+        {
+        }
 
         public WorkModel(IWorkModelDAO dao)
         {
